@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">AboutMeAndroidApp</string>
-
     <string name="startButton">Click to learn about me!</string>
+    <string name="firstFact">In my free time I like to read. I like to read about physics, math, and novels. I really like anything ranging from fiction to non-fiction. I often read multiple books at one time.</string>
+    <string name="secondfact">I was born in New York City on Januray 1, 1999. I lived in New York until I was thirteen. I moved to Utah about three to four years ago.</string>
+    <string name="thirdFact">My favorite school subject is physics. Currently I’m taking AP Physics. I also enjoy Math, but not as much as I enjoy Physics. My least favorite school subject was drivers ed.</string>
+    <string name="fourthFact">I enjoy listening to music. My favorite bands are Of Monsters and Men, Walk the Moon, and U2. I often listen to different types of music depending on what I’m doing. If I’m running its fast and loud, if I’m walking it’s slow and calm.</string>
+    <string name="fifthFact">I love watching TV shows. I really dislike movies. A movie has to be really good for me to like it. Some of my favorites shows are Prison Break, Lost, and Heroes. My favorite show of all time is Seinfeld.</string>
     <string name="action_settings">Settings</string>
 </resources>

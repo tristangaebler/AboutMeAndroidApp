@@ -8,12 +8,14 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.graphics.Color;
 import android.view.View;
+import android.widget.TextView;
 
 public class AboutMeActivity extends AppCompatActivity {
 
     //DECLARATION
     private Button startButton;
     private RelativeLayout backgroundLayout;
+    private TextView firstFact;
 
 
     @Override
@@ -24,6 +26,7 @@ public class AboutMeActivity extends AppCompatActivity {
         //Initializing
         startButton = (Button) findViewById(R.id.startButton);
         backgroundLayout = (RelativeLayout) findViewById(R.id.backgroundLayout);
+        firstFact = (TextView) findViewById(R.id.firstFact);
 
         //Helper method -- Should be private
         setUpListeners();
@@ -69,8 +72,16 @@ public class AboutMeActivity extends AppCompatActivity {
             public void onClick(View buttonView){
                 //Where the background changes colors
                 changeBackgroundColor();
+                changeFacts();
 
             }
         });
+    }
+
+    //Changes the acts
+    private void changeFacts() {
+        if (startButton.isActivated() == true) {
+            firstFact.setVisibility(View.VISIBLE);
+        }
     }
 }
