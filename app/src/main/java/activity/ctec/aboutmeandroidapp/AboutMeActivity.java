@@ -80,8 +80,17 @@ public class AboutMeActivity extends AppCompatActivity {
 
     //Changes the acts
     private void changeFacts() {
-        if (startButton.isActivated() == true) {
-            firstFact.setVisibility(View.VISIBLE);
+        int clickCount = 0;
+        while(startButton.isActivated() == true)
+        {
+            clickCount++;
         }
+
+        if(clickCount == 1) {
+            firstFact.setVisibility(View.VISIBLE);
+
+        }
+
+
     }
 }

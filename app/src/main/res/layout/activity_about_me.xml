@@ -5,7 +5,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".AboutMeActivity"
     android:id="@+id/backgroundLayout"
-    android:visibility="invisible">
+    android:visibility="visible">
 
     <Button
         android:layout_width="wrap_content"
@@ -24,5 +24,47 @@
         android:id="@+id/firstFact"
         android:layout_below="@+id/startButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="56dp" />
+        android:layout_marginTop="56dp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/secondfact"
+        android:id="@+id/secondFact"
+        android:layout_alignBottom="@+id/firstFact"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/thirdFact"
+        android:id="@+id/thirdFact"
+        android:layout_alignBottom="@+id/firstFact"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/fourthFact"
+        android:id="@+id/fourthFact"
+        android:layout_alignTop="@+id/firstFact"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/fifthFact"
+        android:id="@+id/fifthFact"
+        android:layout_alignBottom="@+id/fourthFact"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
 </RelativeLayout>
