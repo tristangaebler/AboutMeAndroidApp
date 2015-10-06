@@ -29,10 +29,12 @@
         android:layout_marginTop="56dp"
         android:visibility="visible" />
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
+
         android:text="@string/secondFact"
         android:id="@+id/secondFact"
         android:layout_alignTop="@+id/firstFact"
@@ -65,6 +67,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/fifthFact"
         android:id="@+id/fifthFact"
+
         android:layout_alignTop="@+id/firstFact"
         android:layout_centerHorizontal="true"
         android:visibility="invisible" />

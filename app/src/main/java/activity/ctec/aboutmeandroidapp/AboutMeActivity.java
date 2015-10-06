@@ -27,6 +27,7 @@ public class AboutMeActivity extends AppCompatActivity {
     private ImageView book;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -126,4 +127,55 @@ public class AboutMeActivity extends AppCompatActivity {
             }
         });
     }
+
+
+    //Changes the acts
+    private void changeFacts() {
+        int clickCount = 0;
+        while(startButton.isActivated() == true)
+        {
+            clickCount++;
+        }
+
+        if(clickCount == 1) {
+            firstFact.setVisibility(View.VISIBLE);
+            secondFact.setVisibility(View.INVISIBLE);
+            thirdFact.setVisibility(View.INVISIBLE);
+            fourthFact.setVisibility(View.INVISIBLE);
+            fifthFact.setVisibility(View.INVISIBLE);
+        }
+        else if(clickCount == 2)
+        {
+            firstFact.setVisibility(View.INVISIBLE);
+            secondFact.setVisibility(View.VISIBLE);
+            thirdFact.setVisibility(View.INVISIBLE);
+            fourthFact.setVisibility(View.INVISIBLE);
+            fifthFact.setVisibility(View.INVISIBLE);
+        }
+        else if(clickCount == 3)
+        {
+            firstFact.setVisibility(View.INVISIBLE);
+            secondFact.setVisibility(View.INVISIBLE);
+            thirdFact.setVisibility(View.VISIBLE);
+            fourthFact.setVisibility(View.INVISIBLE);
+            fifthFact.setVisibility(View.INVISIBLE);
+        }
+        else if(clickCount == 4)
+        {
+            firstFact.setVisibility(View.INVISIBLE);
+            secondFact.setVisibility(View.INVISIBLE);
+            thirdFact.setVisibility(View.INVISIBLE);
+            fourthFact.setVisibility(View.VISIBLE);
+            fifthFact.setVisibility(View.INVISIBLE);
+        }
+        else if(clickCount == 5)
+        {
+            firstFact.setVisibility(View.INVISIBLE);
+            secondFact.setVisibility(View.INVISIBLE);
+            thirdFact.setVisibility(View.INVISIBLE);
+            fourthFact.setVisibility(View.INVISIBLE);
+            fifthFact.setVisibility(View.VISIBLE);
+        }
+    }
+
 }
