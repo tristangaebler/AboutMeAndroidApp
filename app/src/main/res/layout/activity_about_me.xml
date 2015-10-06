@@ -12,12 +12,12 @@
         android:layout_height="wrap_content"
         android:text="@string/startButton"
         android:id="@+id/startButton"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:visibility="visible"
         android:enabled="true"
         android:clickable="true"
-        android:contextClickable="false"/>
+        android:contextClickable="false"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,10 +25,10 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/firstFact"
         android:id="@+id/firstFact"
+        android:layout_marginTop="32dp"
+        android:visibility="gone"
         android:layout_below="@+id/startButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="56dp"
-        android:visibility="visible" />
+        android:layout_centerHorizontal="true" />
 
 
     <TextView
@@ -38,9 +38,11 @@
 
         android:text="@string/secondFact"
         android:id="@+id/secondFact"
-        android:layout_alignTop="@+id/firstFact"
-        android:layout_centerHorizontal="true"
-        android:visibility="invisible" />
+        android:visibility="gone"
+        android:layout_below="@+id/startButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -48,9 +50,11 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/thirdFact"
         android:id="@+id/thirdFact"
-        android:layout_alignTop="@+id/firstFact"
-        android:layout_centerHorizontal="true"
-        android:visibility="invisible" />
+        android:visibility="gone"
+        android:layout_below="@+id/startButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -58,9 +62,11 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/fourthFact"
         android:id="@+id/fourthFact"
-        android:layout_alignTop="@+id/firstFact"
-        android:layout_centerHorizontal="true"
-        android:visibility="invisible" />
+        android:visibility="gone"
+        android:layout_below="@+id/startButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="31dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -69,54 +75,63 @@
         android:text="@string/fifthFact"
         android:id="@+id/fifthFact"
 
-        android:layout_alignTop="@+id/firstFact"
-        android:layout_centerHorizontal="true"
-        android:visibility="invisible" />
+        android:visibility="gone"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/startButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/book"
-        android:layout_below="@+id/fourthFact"
-        android:layout_centerHorizontal="true"
         android:src="@drawable/book"
-        android:visibility="invisible" />
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="26dp" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/city"
         android:src="@drawable/new_york_city"
-        android:layout_alignParentBottom="true"
-        android:layout_below="@+id/fourthFact"
-        android:visibility="invisible" />
+        android:visibility="gone"
+        android:layout_below="@+id/secondFact"
+        android:layout_alignLeft="@+id/firstFact"
+        android:layout_alignStart="@+id/firstFact"
+        android:layout_marginTop="32dp" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/physics"
         android:src="@drawable/physics"
-        android:layout_below="@+id/fourthFact"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:visibility="invisible" />
+        android:layout_alignParentStart="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guitar"
-        android:layout_centerHorizontal="true"
         android:src="@drawable/guitar"
-        android:layout_alignTop="@+id/book"
-        android:visibility="invisible" />
+        android:visibility="gone"
+        android:layout_below="@+id/fourthFact"
+        android:layout_alignLeft="@+id/firstFact"
+        android:layout_alignStart="@+id/firstFact"
+        android:layout_marginTop="25dp" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/seinfeld"
         android:src="@drawable/seinfeld"
-        android:layout_alignTop="@+id/book"
+        android:visibility="gone"
+        android:layout_below="@+id/fifthFact"
         android:layout_centerHorizontal="true"
-        android:visibility="invisible" />
+        android:layout_marginTop="28dp" />
 
 </RelativeLayout>
