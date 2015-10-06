@@ -1,5 +1,7 @@
 package activity.ctec.aboutmeandroidapp;
 
+import android.media.Image;
+import android.media.ImageReader;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,8 +25,12 @@ public class AboutMeActivity extends AppCompatActivity {
     private TextView thirdFact;
     private TextView fourthFact;
     private TextView fifthFact;
-    private int clickCount;
     private ImageView book;
+    private ImageView city;
+    private ImageView physics;
+    private ImageView guitar;
+    private ImageView seinfeld;
+    private int clickCount;
 
 
 
@@ -41,6 +47,11 @@ public class AboutMeActivity extends AppCompatActivity {
         thirdFact = (TextView) findViewById(R.id.thirdFact);
         fourthFact = (TextView) findViewById(R.id.fourthFact);
         fifthFact = (TextView) findViewById(R.id.fifthFact);
+        book = (ImageView) findViewById(R.id.book);
+        city = (ImageView) findViewById(R.id.city);
+        physics = (ImageView) findViewById(R.id.physics);
+        guitar = (ImageView) findViewById(R.id.guitar);
+        seinfeld = (ImageView) findViewById(R.id.seinfeld);
         clickCount = 0;
 
         //Helper method -- Should be private
@@ -83,39 +94,69 @@ public class AboutMeActivity extends AppCompatActivity {
     }
 
     //Changing the text visibility method
-    private void changeVisibility() {
+    private void changeFacts() {
         if(clickCount == 0) {
             firstFact.setVisibility(View.VISIBLE);
-            secondFact.setVisibility(View.GONE);
+            secondFact.setVisibility(View.INVISIBLE);
+            thirdFact.setVisibility(View.INVISIBLE);
+            fourthFact.setVisibility(View.INVISIBLE);
+            fifthFact.setVisibility(View.INVISIBLE);
+            book.setVisibility(View.VISIBLE);
+            city.setVisibility(View.INVISIBLE);
+            physics.setVisibility(View.INVISIBLE);
+            guitar.setVisibility(View.INVISIBLE);
+            seinfeld.setVisibility(View.INVISIBLE);
             clickCount++;
         }else if(clickCount == 1) {
             firstFact.setVisibility(View.GONE);
             secondFact.setVisibility(View.VISIBLE);
+            thirdFact.setVisibility(View.INVISIBLE);
+            fourthFact.setVisibility(View.INVISIBLE);
+            fifthFact.setVisibility(View.INVISIBLE);
+            book.setVisibility(View.GONE);
+            city.setVisibility(View.VISIBLE);
+            physics.setVisibility(View.INVISIBLE);
+            guitar.setVisibility(View.INVISIBLE);
+            seinfeld.setVisibility(View.INVISIBLE);
             clickCount++;
         }else if(clickCount == 2) {
             firstFact.setVisibility(View.GONE);
             secondFact.setVisibility(View.GONE);
             thirdFact.setVisibility(View.VISIBLE);
+            fourthFact.setVisibility(View.INVISIBLE);
+            fifthFact.setVisibility(View.INVISIBLE);
+            book.setVisibility(View.GONE);
+            city.setVisibility(View.GONE);
+            physics.setVisibility(View.VISIBLE);
+            guitar.setVisibility(View.INVISIBLE);
+            seinfeld.setVisibility(View.INVISIBLE);
             clickCount++;
         }else if(clickCount == 3) {
             firstFact.setVisibility(View.GONE);
             secondFact.setVisibility(View.GONE);
             thirdFact.setVisibility(View.GONE);
             fourthFact.setVisibility(View.VISIBLE);
+            fifthFact.setVisibility(View.INVISIBLE);
+            book.setVisibility(View.GONE);
+            city.setVisibility(View.GONE);
+            physics.setVisibility(View.GONE);
+            guitar.setVisibility(View.VISIBLE);
+            seinfeld.setVisibility(View.INVISIBLE);
             clickCount++;
-        }else {
+        }else if(clickCount == 4) {
             firstFact.setVisibility(View.GONE);
             secondFact.setVisibility(View.GONE);
             thirdFact.setVisibility(View.GONE);
             fourthFact.setVisibility(View.GONE);
             fifthFact.setVisibility(View.VISIBLE);
+            book.setVisibility(View.GONE);
+            city.setVisibility(View.GONE);
+            physics.setVisibility(View.GONE);
+            guitar.setVisibility(View.GONE);
+            seinfeld.setVisibility(View.VISIBLE);
             clickCount++;
         }
 
-    }
-
-    private void changePictureVisibility() {
-        book.setImageResource();
     }
 
     private void setUpListeners(){
@@ -123,59 +164,8 @@ public class AboutMeActivity extends AppCompatActivity {
             public void onClick(View buttonView){
                 //Where the background changes colors
                 changeBackgroundColor();
-                changeVisibility();
+                changeFacts();
             }
         });
     }
-
-
-    //Changes the acts
-    private void changeFacts() {
-        int clickCount = 0;
-        while(startButton.isActivated() == true)
-        {
-            clickCount++;
-        }
-
-        if(clickCount == 1) {
-            firstFact.setVisibility(View.VISIBLE);
-            secondFact.setVisibility(View.INVISIBLE);
-            thirdFact.setVisibility(View.INVISIBLE);
-            fourthFact.setVisibility(View.INVISIBLE);
-            fifthFact.setVisibility(View.INVISIBLE);
-        }
-        else if(clickCount == 2)
-        {
-            firstFact.setVisibility(View.INVISIBLE);
-            secondFact.setVisibility(View.VISIBLE);
-            thirdFact.setVisibility(View.INVISIBLE);
-            fourthFact.setVisibility(View.INVISIBLE);
-            fifthFact.setVisibility(View.INVISIBLE);
-        }
-        else if(clickCount == 3)
-        {
-            firstFact.setVisibility(View.INVISIBLE);
-            secondFact.setVisibility(View.INVISIBLE);
-            thirdFact.setVisibility(View.VISIBLE);
-            fourthFact.setVisibility(View.INVISIBLE);
-            fifthFact.setVisibility(View.INVISIBLE);
-        }
-        else if(clickCount == 4)
-        {
-            firstFact.setVisibility(View.INVISIBLE);
-            secondFact.setVisibility(View.INVISIBLE);
-            thirdFact.setVisibility(View.INVISIBLE);
-            fourthFact.setVisibility(View.VISIBLE);
-            fifthFact.setVisibility(View.INVISIBLE);
-        }
-        else if(clickCount == 5)
-        {
-            firstFact.setVisibility(View.INVISIBLE);
-            secondFact.setVisibility(View.INVISIBLE);
-            thirdFact.setVisibility(View.INVISIBLE);
-            fourthFact.setVisibility(View.INVISIBLE);
-            fifthFact.setVisibility(View.VISIBLE);
-        }
-    }
-
 }
