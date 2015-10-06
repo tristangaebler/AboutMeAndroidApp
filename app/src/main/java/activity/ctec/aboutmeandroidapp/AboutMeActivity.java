@@ -10,12 +10,18 @@ import android.graphics.Color;
 import android.view.View;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class AboutMeActivity extends AppCompatActivity {
 
     //DECLARATION
     private Button startButton;
     private RelativeLayout backgroundLayout;
     private TextView firstFact;
+    private TextView secondFact;
+    private TextView thirdFact;
+    private TextView fourthFact;
+    private TextView fifthFact;
 
 
     @Override
@@ -27,6 +33,10 @@ public class AboutMeActivity extends AppCompatActivity {
         startButton = (Button) findViewById(R.id.startButton);
         backgroundLayout = (RelativeLayout) findViewById(R.id.backgroundLayout);
         firstFact = (TextView) findViewById(R.id.firstFact);
+        secondFact = (TextView) findViewById(R.id.secondFact);
+        thirdFact = (TextView) findViewById(R.id.thirdFact);
+        fourthFact = (TextView) findViewById(R.id.fourthFact);
+        fifthFact = (TextView) findViewById(R.id.fifthFact);
 
         //Helper method -- Should be private
         setUpListeners();
@@ -88,9 +98,42 @@ public class AboutMeActivity extends AppCompatActivity {
 
         if(clickCount == 1) {
             firstFact.setVisibility(View.VISIBLE);
-
+            secondFact.setVisibility(View.INVISIBLE);
+            thirdFact.setVisibility(View.INVISIBLE);
+            fourthFact.setVisibility(View.INVISIBLE);
+            fifthFact.setVisibility(View.INVISIBLE);
         }
-
-
+        else if(clickCount == 2)
+        {
+            firstFact.setVisibility(View.INVISIBLE);
+            secondFact.setVisibility(View.VISIBLE);
+            thirdFact.setVisibility(View.INVISIBLE);
+            fourthFact.setVisibility(View.INVISIBLE);
+            fifthFact.setVisibility(View.INVISIBLE);
+        }
+        else if(clickCount == 3)
+        {
+            firstFact.setVisibility(View.INVISIBLE);
+            secondFact.setVisibility(View.INVISIBLE);
+            thirdFact.setVisibility(View.VISIBLE);
+            fourthFact.setVisibility(View.INVISIBLE);
+            fifthFact.setVisibility(View.INVISIBLE);
+        }
+        else if(clickCount == 4)
+        {
+            firstFact.setVisibility(View.INVISIBLE);
+            secondFact.setVisibility(View.INVISIBLE);
+            thirdFact.setVisibility(View.INVISIBLE);
+            fourthFact.setVisibility(View.VISIBLE);
+            fifthFact.setVisibility(View.INVISIBLE);
+        }
+        else if(clickCount == 5)
+        {
+            firstFact.setVisibility(View.INVISIBLE);
+            secondFact.setVisibility(View.INVISIBLE);
+            thirdFact.setVisibility(View.INVISIBLE);
+            fourthFact.setVisibility(View.INVISIBLE);
+            fifthFact.setVisibility(View.VISIBLE);
+        }
     }
 }
